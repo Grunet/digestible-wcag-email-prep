@@ -1,1 +1,4 @@
-Deno.rename("../dist/ts/fluentInterface.ts", "../dist/ts/emailPrep.ts");
+const srcFilename = "fluentInterface";
+const distFilename = "emailPrep";
+
+Deno.rename(`../dist/ts/${srcFilename}.ts`, `../dist/ts/${distFilename}.ts`);
