@@ -6,7 +6,7 @@ import { setupHtmlContainer, IContainHtml } from "./htmlAdapter.ts";
 
 function initializeCheerio(htmlContainer: IContainHtml): CheerioStatic {
   const html = htmlContainer.getHtmlAsString();
-  const $ = (cheerio as CheerioAPI).load(html);
+  const $ = cheerio.load(html);
 
   return $;
 }
