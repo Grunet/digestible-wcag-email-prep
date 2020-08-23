@@ -1,4 +1,4 @@
-import { assert, equal } from "https://deno.land/std/testing/asserts.ts";
+import { assert, equal } from "https://deno.land/std@0.60.0/testing/asserts.ts";
 
 import { prepHtml } from "../src/fluentInterface.ts";
 

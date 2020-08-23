@@ -1,4 +1,5 @@
 import { setupHtmlContainer, IContainHtml } from "./htmlAdapter.ts";
+import { convertHtmltoPlainText } from "./plainTextConverterAdapter.ts";
 import {
   overwriteSlots,
   IParameters as IOverwriteSlotsParameters,
@@ -17,6 +18,10 @@ class FluentHtmlContainer {
 
   public getHtmlAsString(): string {
     return this.__htmlContainer.getHtmlAsString();
+  }
+
+  public getHtmlAsPlainText(): string {
+    return convertHtmltoPlainText(this.__htmlContainer);
   }
 
   public overwriteSlots(
