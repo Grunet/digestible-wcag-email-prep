@@ -18,4 +18,5 @@ interface IContainHtml {
   getHtmlAsString: () => string;
 }
 
-export { setupHtmlContainer, IContainHtml };
+export { setupHtmlContainer } 
+export type { IContainHtml }

@@ -30,4 +30,5 @@ interface IAttributeOverrides {
   [attributeName: string]: string;
 }
 
-export { overwriteAttributes, IParameters };
+export { overwriteAttributes } 
+export type { IParameters }

@@ -24,4 +24,5 @@ interface IOverrideInfo {
   [slotName: string]: string;
 }
 
-export { overwriteSlots, IParameters };
+export { overwriteSlots }
+export type { IParameters }
