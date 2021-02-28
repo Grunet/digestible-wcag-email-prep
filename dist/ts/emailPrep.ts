@@ -8,7 +8,7 @@ import {
   IParameters as IOverwriteAttributesParameters,
   overwriteAttributes,
 } from "./overwriteAttributes.ts";
-import { removeHiddenElements } from "./filterHtml";
+import { removeHiddenElements } from "./filterHtml.ts";
 
 class FluentHtmlContainer {
   constructor(html: string) {
