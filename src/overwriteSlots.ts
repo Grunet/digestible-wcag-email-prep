@@ -1,5 +1,5 @@
 import { IContainHtml } from "./htmlAdapter.ts";
-import { initializeCheerio, extractHtmlContainer } from "./cheerioAdapter.ts";
+import { extractHtmlContainer, initializeCheerio } from "./cheerioAdapter.ts";
 
 function overwriteSlots(
   this: IContainHtml,
@@ -24,5 +24,5 @@ interface IOverrideInfo {
   [slotName: string]: string;
 }
 
-export { overwriteSlots }
-export type { IParameters }
+export { overwriteSlots };
+export type { IParameters };

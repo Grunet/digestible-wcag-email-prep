@@ -1,5 +1,5 @@
 import { IContainHtml } from "./htmlAdapter.ts";
-import { initializeCheerio, extractHtmlContainer } from "./cheerioAdapter.ts";
+import { extractHtmlContainer, initializeCheerio } from "./cheerioAdapter.ts";
 
 function overwriteAttributes(
   this: IContainHtml,
@@ -30,5 +30,5 @@ interface IAttributeOverrides {
   [attributeName: string]: string;
 }
 
-export { overwriteAttributes } 
-export type { IParameters }
+export { overwriteAttributes };
+export type { IParameters };
