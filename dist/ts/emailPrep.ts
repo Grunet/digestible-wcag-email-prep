@@ -1,13 +1,14 @@
-import { setupHtmlContainer, IContainHtml } from "./htmlAdapter.ts";
+import { IContainHtml, setupHtmlContainer } from "./htmlAdapter.ts";
 import { convertHtmltoPlainText } from "./plainTextConverterAdapter.ts";
 import {
-  overwriteSlots,
   IParameters as IOverwriteSlotsParameters,
+  overwriteSlots,
 } from "./overwriteSlots.ts";
 import {
-  overwriteAttributes,
   IParameters as IOverwriteAttributesParameters,
+  overwriteAttributes,
 } from "./overwriteAttributes.ts";
+import { removeHiddenElements } from "./filterHtml";
 
 class FluentHtmlContainer {
   constructor(html: string) {
@@ -39,6 +40,12 @@ class FluentHtmlContainer {
       this.__htmlContainer,
       params,
     );
+
+    return new FluentHtmlContainer(newHtmlContainer.getHtmlAsString());
+  }
+
+  public removeHiddenElements(): FluentHtmlContainer {
+    const newHtmlContainer = removeHiddenElements.call(this.__htmlContainer);
 
     return new FluentHtmlContainer(newHtmlContainer.getHtmlAsString());
   }
